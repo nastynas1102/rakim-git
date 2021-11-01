@@ -22,6 +22,9 @@
 
     <modules>
         <module>eureka-server</module>
+        <module>order-service</module>
+        <module>user-service</module>
+
     </modules>
 
     <properties>
@@ -32,24 +35,6 @@
         <mysql.version>5.1.47</mysql.version>
         <mybatis.version>2.1.1</mybatis.version>
     </properties>
-
-<!--    <dependencies>-->
-    <!--        &lt;!&ndash;spring-cloud&ndash;&gt;-->
-    <!--        <dependency>-->
-    <!--            <groupId>org.springframework.cloud</groupId>-->
-    <!--            <artifactId>spring-cloud-dependencies</artifactId>-->
-    <!--            <version>${spring-cloud.version}</version>-->
-    <!--            <type>pom</type>-->
-    <!--            <scope>import</scope>-->
-    <!--        </dependency>-->
-
-    <!--        &lt;!&ndash;lombok&ndash;&gt;-->
-    <!--        <dependency>-->
-    <!--            <groupId>org.projectlombok</groupId>-->
-    <!--            <artifactId>lombok</artifactId>-->
-    <!--            <optional>true</optional>-->
-    <!--        </dependency>-->
-    <!--    </dependencies>-->
 
     <dependencyManagement>
         <dependencies>
@@ -83,5 +68,11 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>

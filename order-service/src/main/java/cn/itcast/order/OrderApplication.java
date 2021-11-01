@@ -9,6 +9,7 @@ import org.springframework.web.client.RestTemplate;
 
 @MapperScan("cn.itcast.order.mapper")
 @SpringBootApplication
+// @EnableDiscoveryClient --并不是Eureka服务发现必要的注解
 // @EnableFeignClients(clients = UserClient.class,defaultConfiguration = DefaultFeignConfiguration.class)
 public class OrderApplication {
 
@@ -25,8 +26,11 @@ public class OrderApplication {
         return new RestTemplate();
     }
 
-   /* @Bean
-    public IRule randomRule() {
-        return new RandomRule();
-    }*/
+    /**
+     * 所有service全局负载均衡策略（优先级高于application.yml中的配置）
+     * */
+    // @Bean
+    // public IRule randomRule() {
+    //     return new RandomRule();
+    // }
 }
